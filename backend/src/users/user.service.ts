@@ -31,6 +31,14 @@ export class UserService {
     }
   }
 
+  async getOneByEmail(email: string) {
+    try {
+        return await this.userRepository.findOneBy({ email });
+    } catch (error) {
+        throw new NotFoundException(error.message)
+    }
+  }
+
   async update(id: string, data: UpdateUserDto) {
     const user = await this.getOne(id);
     this.userRepository.merge(user, data)
