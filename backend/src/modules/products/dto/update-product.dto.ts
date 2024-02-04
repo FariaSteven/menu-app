@@ -1,4 +1,37 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateProductDto } from './create-product.dto';
+import {
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  IsUUID,
+  IsArray,
+  ValidateNested,
+} from "class-validator";
+import { Type } from "class-transformer";
 
-export class UpdateProductDto extends PartialType(CreateProductDto) {}
+class CategoryDto {
+  @IsUUID()
+  id: string;
+}
+
+export class UpdateProductDto {
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => CategoryDto)
+  categories: CategoryDto[];
+
+  @IsNotEmpty()
+  @IsString()
+  name: string;
+
+  @IsNotEmpty()
+  @IsNumber()
+  qty: number;
+
+  @IsNotEmpty()
+  @IsNumber()
+  price: number;
+
+  @IsNotEmpty()
+  @IsString()
+  photo: string;
+}

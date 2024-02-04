@@ -1,23 +1,31 @@
-import { BeforeInsert, Column, CreateDateColumn, Entity, ManyToMany, JoinTable, PrimaryGeneratedColumn, UpdateDateColumn, DeleteDateColumn } from "typeorm";
-import { hashSync } from 'bcrypt';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToMany,
+  JoinTable,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+  DeleteDateColumn,
+} from "typeorm";
 import { Category } from "./category.entity";
 
-@Entity({ name: 'products' })
-export class ProductEntity {
+@Entity({ name: "products" })
+export class ProductsEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @ManyToMany(type => Category)
+  @ManyToMany((type) => Category)
   @JoinTable()
   categories: Category[];
 
   @Column({ name: "name" })
   name: string;
 
-  @Column({ name: "qty", type: 'int' })
+  @Column({ name: "qty" })
   qty: number;
 
-  @Column({ name: "price", type: 'decimal', precision: 10, scale: 2 })
+  @Column({ name: "price" })
   price: number;
 
   @Column({ name: "photo" })
@@ -31,5 +39,4 @@ export class ProductEntity {
 
   @DeleteDateColumn({ name: "deletedAt" })
   deletedAt: string;
-
 }
