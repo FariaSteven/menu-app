@@ -21,7 +21,9 @@ import { diskStorage } from "multer";
 import * as fs from "fs";
 import { FileInterceptor } from "@nestjs/platform-express/multer";
 import { v4 as uuid4 } from 'uuid';
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags('Products')
 @Controller("products")
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
