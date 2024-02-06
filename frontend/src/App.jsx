@@ -1,10 +1,19 @@
 import "./App.scss";
+import Header from "./components/header/header";
+import Landing from "./pages/landing/landing";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1>Teste</h1>
-    </div>
+    <>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
