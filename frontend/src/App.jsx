@@ -1,9 +1,9 @@
-import './App.css';
+import "./App.scss";
 
 function App() {
   return (
     <div>
-      Teste
+      <h1>Teste</h1>
     </div>
   );
 }
