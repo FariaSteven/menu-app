@@ -1,4 +1,4 @@
-button {
+.default-button {
   background-color: #ff844f;
   font-size: 1.5rem;
   color: #fff;
@@ -12,5 +12,26 @@ button {
   font-size: 1.5rem;
   border: 1px solid #ff844f;
   color: #ff844f;
+  border-radius: 30px;
+  padding: 0px 10px;
+  max-height: 40px;
+}
+
+.button-scrolled {
+  background-color: #fff;
+  font-size: 1.5rem;
+  color: #ff8d08;
+  border-radius: 30px;
+  padding: 0px 10px;
+  max-height: 40px;
+}
+
+.button-scrolled-outlined {
+  background-color: #ff8d08;
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 0px 10px;
   max-height: 40px;
 }
