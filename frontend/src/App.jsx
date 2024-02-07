@@ -1,6 +1,6 @@
 import "./App.scss";
-import Header from "./components/header/header";
-import Landing from "./pages/landing/landing";
+import Header from "./components/Header/Header";
+import Landing from "./pages/landing/Landing";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

@@ -1,10 +1,10 @@
 import React from "react";
-import "./header.scss";
+import "./Header.scss";
 
 import OrangeLogo from "../../assets/BigBiteLogoOrange.svg";
 import Menu from "../../assets/Menu.svg";
 
-import Button from "../button/button";
+import Button from "../Button/Button";
 
 const Header = () => {
   return (

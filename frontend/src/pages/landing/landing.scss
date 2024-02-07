@@ -1,3 +1,28 @@
-h4 {
-    font-size: large;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  h4 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 200;
+    margin: 40px 60px;
+
+    bold {
+      font-weight: 600;
+      color: #ff844f;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 10px;
+    
+    button {
+      font-size: 1.6rem;
+      padding: 8px 20px;
+    }
+  }
 }
