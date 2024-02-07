@@ -2,6 +2,7 @@ import React from "react";
 import "./Landing.scss";
 import Button from "../../components/Button/Button";
 import ProductsCarousel from "../../components/ProductsCarousel/ProductsCarousel";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 const Landing = () => {
   return (
@@ -15,6 +16,18 @@ const Landing = () => {
         <Button text="Reservar" outlined={true} />
       </div>
       <ProductsCarousel />
+      <h1
+        style={{
+          fontSize: "2rem",
+          textAlign: "center",
+          color: "#FF844F",
+          fontWeight: "900",
+          padding: "30px",
+        }}
+      >
+        Avaliações
+      </h1>
+      <Testimonial/>
     </div>
   );
 };
