@@ -17,10 +17,18 @@
     }
   }
 
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #ff844f;
+    font-weight: 900;
+    padding: 30px;
+  }
+
   .buttons-container {
     display: flex;
     gap: 10px;
-    
+
     button {
       font-size: 1.6rem;
       padding: 8px 20px;
