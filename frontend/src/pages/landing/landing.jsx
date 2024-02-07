@@ -17,8 +17,11 @@ const Landing = () => {
         <Button text="Ver cardápio" />
         <Button text="Reservar" outlined={true} />
       </div>
+      <h1 className="title">
+        Mais pedidos
+      </h1>
       <ProductsCarousel />
-      <h1 className="title">Avaliações</h1>
+      <h1 >Avaliações</h1>
       <Testimonial />
     </div>
   );
