@@ -11,22 +11,14 @@ header {
         display: flex;
         align-items: center;
         gap: 10px;
+
+        img {
+            cursor: pointer;
+        }
     }
 }
 
 .header-scrolled {
     background-color: #ff8d08;
     transition: all 0.3s ease-in-out;
-    // width: 100%;
-    // position: fixed;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    // padding: 10px;
-
-    // div {
-    //     display: flex;
-    //     align-items: center;
-    //     gap: 10px;
-    // }
 }

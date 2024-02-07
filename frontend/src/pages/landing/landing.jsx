@@ -6,7 +6,7 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 
 import "./Landing.scss";
 
-const Landing = ({ setScrollTop }) => {
+const Landing = ({ setScrollTop, isMenuOpen }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
@@ -22,11 +22,11 @@ const Landing = ({ setScrollTop }) => {
         encontrar todos os nossos pratos
       </h4>
       <div className="buttons-container">
-        <Button text="Ver cardápio" />
+        <Button text="Ver cardápio" link="/cardapio" />
         <Button text="Reservar" outlined={true} />
       </div>
       <h1 className="title">Mais pedidos</h1>
-      <ProductsCarousel />
+      <ProductsCarousel isMenuOpen={isMenuOpen} />
       <h1>Avaliações</h1>
       <Testimonial />
     </div>

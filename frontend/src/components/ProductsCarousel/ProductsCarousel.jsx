@@ -9,10 +9,10 @@ import "swiper/css/navigation";
 import "./ProductsCarousel.scss";
 import ProductItem from "../ProductItem/ProductItem";
 
-const ProductsCarousel = () => {
+const ProductsCarousel = ({ isMenuOpen }) => {
   return (
     <Swiper
-      className="swiper-container"
+      className={ isMenuOpen ? "swiper-container-depth" : "swiper-container"}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
